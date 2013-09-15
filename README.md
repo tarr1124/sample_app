@@ -26,3 +26,6 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Ruby on Rails Tutorial:Sample Application
+This is Sample Application for Ruby on Rails Tutorial.
