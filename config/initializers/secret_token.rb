@@ -14,7 +14,7 @@ def secure_token
   token_file = Rails.root.join('.secret')
   if File.exist?(token_file)
     # Use the exitsting token.
-    File.read(token_file).comp
+    File.read(token_file).chomp
   else
     # Generate a new token and store it in token_file.
     token = SecureRandom.hex(64)
@@ -24,4 +24,4 @@ def secure_token
 end
 
 
-SampleApp::Application.config.secret_key_base = '0e75c505c8487624057110dec5051df2075f6c75c90cee1f78bd03722661c4255f5efbfebb2bc1ba82bbd91250778c9c1116f4e7b324e704f039ccfc8819f44d'
+SampleApp::Application.config.secret_key_base = secure_token
